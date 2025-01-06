@@ -1,16 +1,10 @@
-import Button from "./button";
+import { useRoutes } from "react-router-dom";
+import { appRoutes } from "./components/common/app-routers";
 
 function App() {
+  const routesElement = useRoutes(appRoutes);
   return (
-    <main className="px-4 pt-16 text-center">
-      <h1 className="text-4xl font-bold underline">Hello world!</h1>
-      <Button
-        label="PING"
-        onClick={() => {
-          alert("PONG");
-        }}
-      />
-    </main>
+    <main>{routesElement}</main>
   );
 }
 
